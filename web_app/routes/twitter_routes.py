@@ -64,6 +64,8 @@ def fetch_user_data(screen_name=None):
 
     return render_template("users.html", users=User.query.all(), tweets=statuses) # tweets=db_tweets
 
+
+
 @twitter_routes.route("/users")
 def list_users_human_friendly():
     db_users = User.query.all()
